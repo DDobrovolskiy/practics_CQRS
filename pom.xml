@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>Orchestrator</module>
+        <module>Account</module>
     </modules>
 
     <groupId>com.example</groupId>
