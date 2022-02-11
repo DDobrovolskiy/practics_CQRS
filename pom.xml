@@ -7,6 +7,7 @@
         <module>Orchestrator</module>
         <module>Account</module>
         <module>Payment_history</module>
+        <module>Gateway</module>
     </modules>
 
     <groupId>com.example</groupId>

@@ -1,4 +1,4 @@
-package dda.cqrs.payment.config;
+package dda.cqrs.gateway.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.info.BuildProperties;
@@ -23,15 +23,15 @@ public class SwaggerConfig {
     public Docket api() {
         var version = buildProperties != null ? buildProperties.getVersion() : "undefined";
         var apiInfo = new ApiInfoBuilder()
-                .title("Payment history")
-                .description("Сервис истории платежей")
+                .title("Брокерская система")
+                .description("Самопридуманная")
                 .version(version)
                 .build();
 
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("dda.cqrs.payment.web"))
+                .apis(RequestHandlerSelectors.basePackage("ru.test.gateway"))
                 .paths(PathSelectors.ant("/**"))
                 .build();
     }
